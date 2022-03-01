@@ -23,12 +23,14 @@
     />
   </head>
   <body>
+    <!-- Header Part -->
     <header>
       <h1 class="text-center text-white bg-info p-2">
         <i class="fa-solid fa-mobile-screen-button fw-bold"></i> Shadman's Phone
         Store
       </h1>
     </header>
+
     <main>
       <!-- Search Input -->
       <div class="input-group mt-3 mb-3 mx-auto w-50">
@@ -48,22 +50,24 @@
         >
           Search
         </button>
-        <!-- Error Handling -->
-        <div>
-          <h3 id="Error-Handling"></h3>
-        </div>
       </div>
+
+      <!-- Error Handling -->
+      <h3 id="Error-Handling" class="text-info text-center p-4"></h3>
+
       <!-- Bootstrap cards For Phone Details -->
       <div
         id="phone-details"
         class="container mx-auto row row-cols-1 row-cols-md-3 g-4"
       ></div>
+
       <!-- Bootstrap cards For Search -->
       <div
         id="search-results"
         class="container mx-auto row row-cols-1 row-cols-md-3 g-4"
       ></div>
     </main>
+
     <!-- Bootstrap Js Bundle -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

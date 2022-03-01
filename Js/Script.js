@@ -10,13 +10,18 @@ const allPhones = () => {
 
 const displayPhone = (phones) => {
   const searchResults = document.getElementById("search-results");
-  console.log(phones);
+  const ErrorHandling = document.getElementById("Error-Handling");
+  searchResults.innerHTML = "";
+  if (phones.length == 0) {
+    ErrorHandling.innerText = "Muri Kha";
+  }
+  // console.log(phones);
 
   for (let phone of phones) {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `<div class="card h-100 border-info shadow mt-3">
-      <img src="${phone.image}" class="card-img-top w-25 mt-3        mx-auto" alt="..." />
+      <img src="${phone.image}" class="card-img-top w-25 mt-3 mx-auto" alt="..." />
          <div class="card-body">
           <h5 class="card-title text-center">${phone.phone_name}</h5>
           <h6 class="card-text text-center">
@@ -45,13 +50,13 @@ const PhoneDetails = (phoneDetails) => {
 
 const displayPhoneDetail = (details) => {
   console.log(details);
-  const displayPhoneDetailS = document.getElementById("phone-details");
   for (let detail of details) {
+    const displayPhoneDetailS = document.getElementById("phone-details");
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
     <div class="card h-100 border-info shadow mt-3">
-        <img src="${detail.image}" class="card-img-top w-25 mt-3 mx-auto" alt="..." />
+        <img src="${detail.data.image}" class="card-img-top w-25 mt-3 mx-auto" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">${detail.brand}</h5>
         <h6 class="card-text text-center">
