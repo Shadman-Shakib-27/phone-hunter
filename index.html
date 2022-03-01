@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shadman's Phone Store</title>
+    <!-- Css Link -->
     <link rel="stylesheet" href="./Css/Styles.css" />
     <!-- Favicon Link -->
     <link rel="shortcut icon" href="./images/Shadman.png" type="image/x-icon" />
@@ -40,15 +41,24 @@
           aria-describedby="button-addon2"
         />
         <button
-          onclick="allPhone()"
+          onclick="allPhones()"
           class="btn btn-outline-info rounded fw-bold"
           type="button"
           id="search-button"
         >
           Search
         </button>
+        <!-- Error Handling -->
+        <div>
+          <h3 id="Error-Handling"></h3>
+        </div>
       </div>
-      <!-- Bootstrap cards -->
+      <!-- Bootstrap cards For Phone Details -->
+      <div
+        id="phone-details"
+        class="container mx-auto row row-cols-1 row-cols-md-3 g-4"
+      ></div>
+      <!-- Bootstrap cards For Search -->
       <div
         id="search-results"
         class="container mx-auto row row-cols-1 row-cols-md-3 g-4"
